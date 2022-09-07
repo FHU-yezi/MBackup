@@ -10,6 +10,7 @@ python = "^3.8"
 httpx = "^0.23.0"
 PyYAML = "^6.0"
 oss2 = "^2.16.0"
+cryptography = "37.0.4"
 
 [tool.poetry.dev-dependencies]
 types-PyYAML = "^6.0.11"
