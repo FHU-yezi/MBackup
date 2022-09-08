@@ -6,7 +6,7 @@ networks:
 
 services:
   main:
-    image: mbackup:0.1.0
+    image: mbackup:0.1.1
     build: .
     volumes:
       - "./config.yaml:/app/config.yaml"
@@ -18,7 +18,7 @@ services:
       resources:
         limits:
           cpus: "0.30"
-          memory: 128M
+          memory: 256M
       restart_policy:
         condition: on-failure
         delay: 5s
