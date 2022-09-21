@@ -4,6 +4,7 @@ ENV TZ Asia/Shanghai
 
 WORKDIR /app
 
+# 更换阿里云 apt 源
 RUN echo "deb [trusted=yes] http://mirrors.aliyun.com/ubuntu/ focal main \
           deb-src [trusted=yes] http://mirrors.aliyun.com/ubuntu/ focal main" \
           > /etc/apt/sources.list
@@ -22,6 +23,8 @@ COPY requirements.txt .
 RUN pip install \
     -r requirements.txt \
     --no-cache-dir \
+    --no-compile \
+    --disable-pip-version-check \
     --quiet \
     -i https://mirrors.aliyun.com/pypi/simple
 
