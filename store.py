@@ -2,7 +2,7 @@ from datetime import date
 
 from oss2 import Auth, Bucket
 
-from command import command_get_files_in_dir
+from db_manager import command_get_files_in_dir
 
 
 def get_auth_obj(access_key_id: str, access_key_secret: str) -> Auth:
