@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "MBackup"
-version = "0.1.1"
+version = "0.2.0"
 description = "MongoDB => 阿里云 OSS 自动备份"
 authors = ["yezi <yehaowei20060411@qq.com>"]
 license = "MIT"
@@ -12,6 +12,7 @@ PyYAML = "^6.0"
 oss2 = "^2.16.0"
 cryptography = "37.0.4"
 APScheduler = "^3.9.1"
+pymongo = "^4.2.0"
 
 [tool.poetry.dev-dependencies]
 types-PyYAML = "^6.0.11"

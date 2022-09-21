@@ -6,10 +6,10 @@ networks:
 
 services:
   main:
-    image: mbackup:0.1.1
+    image: mbackup:0.2.0
     build: .
     volumes:
-      - "./config.yaml:/app/config.yaml"
+      - "./config.yaml:/app/config.yaml:ro"
     networks:
       - mongodb
     environment:
@@ -17,7 +17,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
+          cpus: "1.00"
           memory: 256M
       restart_policy:
         condition: on-failure
