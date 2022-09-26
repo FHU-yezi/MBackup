@@ -11,23 +11,23 @@ _DEFAULT_CONFIG = {
     "source": "本地",
     "db": {
         "host": "localhost",
-        "port": 27017
+        "port": 27017,
     },
     "oss": {
         "access_key_id": "",
         "access_key_secret": "",
         "bucket_endpoint": "",
-        "bucket_name": ""
+        "bucket_name": "",
     },
     "message_sender": {
         "app_id": "",
         "app_secret": "",
-        "email": ""
-    }
+        "email": "",
+    },
 }
 
 
-class Config():
+class Config:
     def __new__(cls) -> "Config":
         # 单例模式
         if not hasattr(cls, "_instance"):
@@ -54,7 +54,7 @@ class Config():
         self.__init__()
 
 
-class ConfigNode():
+class ConfigNode:
     def __init__(self, data: Dict[str, Any]) -> None:
         self._data: Dict[str, Any] = data
 
