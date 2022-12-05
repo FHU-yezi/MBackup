@@ -16,10 +16,12 @@ def cron_to_kwargs(cron: str) -> Dict[str, str]:
         Dict[str, str]: 参数组
     """
     second, minute, hour, day, month, day_of_week = cron.split()
-    result = {"second": second,
-              "minute": minute,
-              "hour": hour,
-              "day": day,
-              "month": month,
-              "day_of_week": day_of_week}
+    result = {
+        "second": second,
+        "minute": minute,
+        "hour": hour,
+        "day": day,
+        "month": month,
+        "day_of_week": day_of_week,
+    }
     return result
