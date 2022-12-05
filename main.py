@@ -4,7 +4,7 @@ from typing import List
 from apscheduler.schedulers.blocking import BlockingScheduler
 from pymongo import MongoClient
 
-from config_manager import config
+from utils.config import config
 from db_manager import (
     backup_collection,
     command_get_dir_size_in_MB,
@@ -12,9 +12,9 @@ from db_manager import (
     get_collection_names_list,
     get_db_names_list,
 )
-from message_sender import send_task_success_card
+from utils.message import send_task_success_card
 from store import get_auth_obj, get_bucket_obj, upload_dir
-from utils import cron_to_kwargs
+from utils.time_helper import cron_to_kwargs
 
 
 def full_backup_job() -> None:

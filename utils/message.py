@@ -2,8 +2,8 @@ from typing import Dict
 
 from httpx import post as httpx_post
 
-from config_manager import config
-from utils import get_now_without_mileseconds
+from utils.config import config
+from utils.time_helper import get_now_without_mileseconds
 
 
 def get_feishu_token() -> str:
