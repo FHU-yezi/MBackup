@@ -6,7 +6,7 @@ networks:
 
 services:
   main:
-    image: mbackup:0.2.0
+    image: mbackup:0.3.0
     build: .
     volumes:
       - "./config.yaml:/app/config.yaml:ro"
